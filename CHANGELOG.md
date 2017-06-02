@@ -1,3 +1,7 @@
+## 0.4.3
+
+* Update the mirror URL to use downloads.wkhtmltopdf.org instead of gna.org
+
 ## 0.4.1
 
 * Update the mirror URL to use gna.org instead of sourceforge
