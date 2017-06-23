@@ -3,7 +3,7 @@ download_dest = File.join(cache_dir, node['wkhtmltopdf-update']['package'])
 
 remote_file download_dest do
   source node['wkhtmltopdf-update']['mirror_url']
-  mode '0644'
+  mode '0777'
   action :create_if_missing
 end
 
