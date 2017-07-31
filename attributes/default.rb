@@ -36,5 +36,5 @@ else
   end
 end
 
-default['wkhtmltopdf-update']['mirror_url'] = "http://wserver.co.uk/wkhtmltopdf/#{node['wkhtmltopdf-update']['version']}/#{node['wkhtmltopdf-update']['package']}"
+default['wkhtmltopdf-update']['mirror_url'] = "https://s3-us-west-2.amazonaws.com/apollo-devops/#{node['wkhtmltopdf-update']['package']}"
 
