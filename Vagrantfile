@@ -92,6 +92,16 @@ Vagrant.configure('2') do |config|
         override.vm.box_url = "https://vagrantcloud.com/parallels/boxes/ubuntu-14.10"
     end
   end
+  
+  config.vm.define :ubuntu1604 do |ubuntu1604|
+    ubuntu1604.vm.box      = 'opscode-ubuntu-16.04'
+    ubuntu1604.vm.box_url  = 'http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-16.04_chef-provisionerless.box'
+    ubuntu1604.vm.hostname = "#{cookbook}-ubuntu-1604"
+	config.vm.provider "parallels" do |v, override|
+        override.vm.box = "parallels/ubuntu-16.04"
+        override.vm.box_url = "https://vagrantcloud.com/parallels/boxes/ubuntu-16.04"
+    end
+  end
 
   config.vm.network :private_network, ip: '192.168.50.10'
 
