@@ -8,11 +8,8 @@ Cookbook Compatibility:
 
  * chef-wkhtmltopdf 0.3.0: wkhtmltopdf 0.12.2
  * chef-wkhtmltopdf 0.3.1: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.0: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.1: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.2: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.3: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.5.0: wkhtmltopdf 0.12.4
+ * chef-wkhtmltopdf 0.4.x: wkhtmltopdf 0.12.2.1
+ * chef-wkhtmltopdf 0.5.x: wkhtmltopdf 0.12.4
 
 ## Requirements
 

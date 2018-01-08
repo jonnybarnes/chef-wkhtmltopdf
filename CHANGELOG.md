@@ -1,3 +1,9 @@
+## 0.5.1
+
+* Removed the unused and deprecated `replaces` keyword from the metadata.rb
+* Updated the README to use 0.a.x instead of each version.
+* Fixed another foodcritic issue. This may break actual installation?
+
 ## 0.5.0
 
 * Updated the mirror URL to use github.com/wmkhtmltopdf/wkhtmltopdf/releases/downlaod
