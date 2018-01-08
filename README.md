@@ -11,6 +11,7 @@ Cookbook Compatibility:
  * chef-wkhtmltopdf 0.4.0: wkhtmltopdf 0.12.2.1
  * chef-wkhtmltopdf 0.4.1: wkhtmltopdf 0.12.2.1
  * chef-wkhtmltopdf 0.4.2: wkhtmltopdf 0.12.2.1
+ * chef-wkhtmltopdf 0.4.3: wkhtmltopdf 0.12.2.1
 
 ## Requirements
 
@@ -75,7 +76,7 @@ Please use standard Github issues/pull requests and if possible, in combination 
 ## Maintainers
 
 * Brian Flad (<bflad417@gmail.com>) [Deprecated ... He's no longer maintaining or merging pull requests. Decided to fork and start fresh.]
-* Jarvis Stubblefield (jarvis@vortexrevolutions.com)
+* Jarvis Stubblefield (jarvis@vortexrevolutions.com) Twitter: @BallisticPain
 
 ## License
 
