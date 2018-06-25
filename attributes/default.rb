@@ -25,16 +25,16 @@ else
   if node['kernel']['machine'] == 'x86_64'
     default['wkhtmltopdf-update']['platform'] = 'linux-amd64'
     default['wkhtmltopdf-update']['package'] = value_for_platform_family(
-      %w(debian) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}_linux-bionic-amd64.deb",
+      %w(debian) => "wkhtmltopdf_#{node['wkhtmltopdf-update']['version']}-1_amd64.deb",
       %w(fedora rhel) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}_linux-centos6-amd64.rpm"
     )
   else
     default['wkhtmltopdf-update']['platform'] = 'linux-i386'
     default['wkhtmltopdf-update']['package'] = value_for_platform_family(
-      %w(debian) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}_linux-bionic-i386.deb",
+      %w(debian) => "wkhtmltox_#{node['wkhtmltopdf-update']['version']}-1_i386.deb",
       %w(fedora rhel) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}_linux-centos6-i386.rpm")
   end
 end
 
-default['wkhtmltopdf-update']['mirror_url'] = "https://s3-us-west-2.amazonaws.com/apollo-devops/#{node['wkhtmltopdf-update']['package']}"
+default['wkhtmltopdf-update']['mirror_url'] = "http://ubuntu.positive-internet.com/ubuntu/pool/universe/w/wkhtmltopdf/#{node['wkhtmltopdf-update']['package']}"
 
