@@ -19,7 +19,7 @@ when 'windows'
   end
 else
   default['wkhtmltopdf-update']['dependency_packages'] = value_for_platform_family(
-    %w(debian) => %w(libfontconfig1 libssl1.0.0 libxext6 libxrender1 fontconfig libjpeg8 xfonts-base xfonts-75dpi libqt5core5a libqt5network5 libqt5svg5),
+    %w(debian) => %w(libfontconfig1 libssl1.0.0 libxext6 libxrender1 fontconfig libjpeg8 xfonts-base xfonts-75dpi libqt5network5 libqt5svg5 libqt5core5a),
     %w(fedora rhel) => %w(fontconfig libXext libXrender openssl-devel urw-fonts)
   )
   if node['kernel']['machine'] == 'x86_64'
