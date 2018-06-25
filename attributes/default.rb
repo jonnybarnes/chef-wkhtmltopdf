@@ -1,10 +1,10 @@
 # Used for uninstalling old recipe for wkhtmltopdf
-default['wkhtmltopdf']['version']     = '0.12.0'
+default['wkhtmltopdf']['version']     = '0.12.4'
 default['wkhtmltopdf']['install_dir'] = '/usr/local/bin'
 default['wkhtmltopdf']['lib_dir']     = ''
 
 default['wkhtmltopdf-update']['major_version'] = '0.12'
-default['wkhtmltopdf-update']['version'] = '0.12.2.1'
+default['wkhtmltopdf-update']['version'] = '0.12.4'
 
 case node['platform_family']
 when 'mac_os_x', 'mac_os_x_server'
@@ -19,7 +19,7 @@ when 'windows'
   end
 else
   default['wkhtmltopdf-update']['dependency_packages'] = value_for_platform_family(
-    %w(debian) => %w(libfontconfig1 libssl0.9.8 libxext6 libxrender1 fontconfig libjpeg8 xfonts-base xfonts-75dpi),
+    %w(debian) => %w(libfontconfig1 libssl1.0.0 libxext6 libxrender1 fontconfig libjpeg8 xfonts-base xfonts-75dpi),
     %w(fedora rhel) => %w(fontconfig libXext libXrender openssl-devel urw-fonts)
   )
   if node['kernel']['machine'] == 'x86_64'
