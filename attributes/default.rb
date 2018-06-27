@@ -33,14 +33,14 @@ else
   if node['kernel']['machine'] == 'x86_64'
     default['wkhtmltopdf-update']['platform'] = 'linux-amd64'
     default['wkhtmltopdf-update']['package'] = value_for_platform_family(
-      %w(debian) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}.trusty-amd64.deb",
-      %w(fedora rhel) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}.centos6-amd64.rpm"
+      %w(debian) => "wkhtmltox_#{node['wkhtmltopdf-update']['version']}.trusty_amd64.deb",
+      %w(fedora rhel) => "wkhtmltox_#{node['wkhtmltopdf-update']['version']}.centos6_amd64.rpm"
     )
   else
     default['wkhtmltopdf-update']['platform'] = 'linux-i386'
     default['wkhtmltopdf-update']['package'] = value_for_platform_family(
-      %w(debian) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}.trusty-i386.deb",
-      %w(fedora rhel) => "wkhtmltox-#{node['wkhtmltopdf-update']['version']}.centos6-i386.rpm")
+      %w(debian) => "wkhtmltox_#{node['wkhtmltopdf-update']['version']}.trusty_i386.deb",
+      %w(fedora rhel) => "wkhtmltox_#{node['wkhtmltopdf-update']['version']}.centos6_i386.rpm")
   end
 
 end
