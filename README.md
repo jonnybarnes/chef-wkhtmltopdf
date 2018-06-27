@@ -8,9 +8,8 @@ Cookbook Compatibility:
 
  * chef-wkhtmltopdf 0.3.0: wkhtmltopdf 0.12.2
  * chef-wkhtmltopdf 0.3.1: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.0: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.1: wkhtmltopdf 0.12.2.1
- * chef-wkhtmltopdf 0.4.2: wkhtmltopdf 0.12.2.1
+ * chef-wkhtmltopdf 0.4.x: wkhtmltopdf 0.12.2.1
+ * chef-wkhtmltopdf 0.5.x: wkhtmltopdf 0.12.4
 
 ## Requirements
 
@@ -22,6 +21,7 @@ Cookbook Compatibility:
 * Ubuntu 13.04
 * Ubuntu 14.04
 * Ubuntu 14.10
+* Ubuntu 16.04
 
 ### Cookbooks
 
@@ -40,7 +40,7 @@ install_dir | directory to install static binaries | String | /usr/local/bin
 lib_dir | directory to install libraries | String | ''
 mirror_url | URL for wkhtmltopdf | String | (auto-detected, see attributes/default.rb)
 platform | wkhtmltopdf platform and architecture | String | (auto-detected, see attributes/default.rb)
-version | wkhtmltopdf version to install | String | 0.12.2.1
+version | wkhtmltopdf version to install | String | 0.12.4
 
 ## Recipes
 
@@ -60,7 +60,7 @@ Here's how you can quickly get testing or developing against the cookbook thanks
     vagrant plugin install vagrant-omnibus
     git clone git://github.com/ballisticpain/chef-wkhtmltopdf.git
     cd chef-wkhtmltopdf
-    vagrant up BOX # BOX being centos5, centos6, debian7, fedora18, fedora19, fedora20, freebsd9, ubuntu1204, ubuntu1210, ubuntu1304, ubuntu1310, ubuntu1404, or ubuntu1410
+    vagrant up BOX # BOX being centos5, centos6, debian7, fedora18, fedora19, fedora20, freebsd9, ubuntu1204, ubuntu1210, ubuntu1304, ubuntu1310, ubuntu1404, ubuntu1410, or ubuntu1604
 
 You can then SSH into the running VM using the `vagrant ssh BOX` command.
 
@@ -75,7 +75,7 @@ Please use standard Github issues/pull requests and if possible, in combination 
 ## Maintainers
 
 * Brian Flad (<bflad417@gmail.com>) [Deprecated ... He's no longer maintaining or merging pull requests. Decided to fork and start fresh.]
-* Jarvis Stubblefield (jarvis@vortexrevolutions.com)
+* Jarvis Stubblefield (jarvis@vortexrevolutions.com) Twitter: @BallisticPain
 
 ## License
 
