@@ -5,6 +5,7 @@ default['wkhtmltopdf']['lib_dir']     = ''
 
 default['wkhtmltopdf-update']['install_dir'] = '/usr/local/bin'
 default['wkhtmltopdf-update']['lib_dir']     = ''
+default['wkhtmltopdf-update']['major_version'] = '0.12.5'
 default['wkhtmltopdf-update']['version'] = '0.12.5-1'
 
 case node['platform_family']
@@ -45,4 +46,4 @@ else
 
 end
 
-default['wkhtmltopdf-update']['mirror_url'] = "https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/#{node['wkhtmltopdf-update']['version']}/#{node['wkhtmltopdf-update']['package']}"
+default['wkhtmltopdf-update']['mirror_url'] = "https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/#{node['wkhtmltopdf-update']['major_version']}/#{node['wkhtmltopdf-update']['package']}"
