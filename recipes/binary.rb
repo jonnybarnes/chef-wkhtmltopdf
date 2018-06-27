@@ -11,9 +11,9 @@ package 'wkhtmltopdf' do
   source download_dest
   not_if "/usr/local/bin/wkhtmltopdf --version | grep #{node['wkhtmltopdf-update']['version']}"
 
-  # if source.end_with?('.deb')
-  #   provider Chef::Provider::Package::Dpkg
-  # elsif source.end_with?('.rpm')
-  #   provider Chef::Provider::Package::Rpm
-  # end
+  if source.end_with?('.deb')
+    provider Chef::Provider::Package::Dpkg
+  elsif source.end_with?('.rpm')
+    provider Chef::Provider::Package::Rpm
+  end
 end
