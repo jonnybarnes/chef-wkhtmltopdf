@@ -7,7 +7,7 @@ remote_file download_dest do
   action :create_if_missing
 end
 
-Array(node['wkhtmltopdf-update']['dependency_packages']).each do |package_name|
+Array(node['wkhtmltopdf-update']['dependency_packages']).each_with_index do |package_name, index|
   package package_name do
     action :install
   end
