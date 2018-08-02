@@ -7,12 +7,6 @@ remote_file download_dest do
   action :create_if_missing
 end
 
-Array(node['wkhtmltopdf-update']['dependency_packages']).each_with_index do |package_name, index|
-  package package_name do
-    action :install
-  end
-end
-
 package 'wkhtmltopdf' do
   source download_dest
   not_if "/usr/local/bin/wkhtmltopdf --version | grep #{node['wkhtmltopdf-update']['version']}"
